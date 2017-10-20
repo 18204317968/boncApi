@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.boncApi.dao.CusTaskDao">
+
+	<insert id="insert">
+		INSERT INTO cus_task(
+		id,
+		task_id,
+		user_id,
+		task_name,
+		begin_time,
+		end_time,
+		antistop,
+		languageZh,
+		data_type,
+		media_level,
+		choose_data,
+		algorith_model,
+		data_model,
+		visual_database,
+		create_date
+		) VALUES (
+		#{id},
+		#{taskId},
+		#{userId},
+		#{taskName},
+		#{beginTime},
+		#{endTime},
+		#{antistop},
+		#{languageZh},
+		#{dataType},
+		#{mediaLevel},
+		#{chooseData},
+		#{algorithModel},
+		#{dataModel},
+		#{visualDatabase},
+		#{createDate}
+		)
+	</insert>
+
+	<insert id="delete">
+		UPDATE cus_task SET del_flag = '1'
+        WHERE  task_id = #{taskId}  AND user_id=#{userId}
+	</insert>
+	
+</mapper>

@@ -1,0 +1,8 @@
+.mymetadata
+.checkstyle
+.class
+.war
+.zip
+.rar
+/target/*
+/src/main/webapp/userfiles/*
